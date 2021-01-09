@@ -6,6 +6,16 @@
 
 ![SampleTableSchema ](./images/user_schema.png)
 
+### Creating Sample Data
+
+I am using Python script with to generate sample data using Faker, sqlalchemy & pandas.
+
+    Steps:
+    1. Create database in mysql `create database solr_test`.
+    2. Create `user` table with above schema. You can use `sample-data-generator/create-user-table.sql` to do that.
+    3. In `sample-data-generator/random-data-generator.py` set number of users you want to create and run the script. `python random-data-generator.py`.
+    4. Check the solr_test.user table for records.
+
 ### Setup Solr
 
 <ol>
