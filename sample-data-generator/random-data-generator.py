@@ -4,11 +4,12 @@ from collections import defaultdict
 from sqlalchemy import create_engine
 
 batch_size=10000
-users_to_insert=10000000
+users_to_insert=100000
+
+fake = Faker()
+engine = create_engine('mysql://root:root@localhost/solr_test', echo=False)
 
 def write():
-
-    fake = Faker()
 
     fake_data = defaultdict(list)
 
@@ -21,11 +22,11 @@ def write():
 
     df_fake_data = pd.DataFrame(fake_data)
 
-    engine = create_engine('mysql://root:root@localhost/solr_test', echo=False)
-
     df_fake_data.to_sql('user', con=engine,index=False, if_exists='append')
 
+def batch():
+    for x in range(0, users_to_insert, batch_size):
+        write();
 
-for x in range(0, users_to_insert, batch_size):
-    write();
+batch()        
 
