@@ -32,8 +32,7 @@ Create a new core *user* - `./bin/solr create -c user`
 2. Create a new core `user`, this will create a directory `user`(server/solr/user) 
 3. You need to create `data-config.xml` inside `server/solr/user/conf`, here we need to add database configuration and entity config.
 
-    ` <dataConfig>
-  <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/solr_test" user="root" password="root" />
+    `<dataConfig><dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/solr_test" user="root" password="root" />
   <document>
     <entity name="user" pk="id" deltaImportQuery="SELECT id,first_name,last_name, job, country from user WHERE id='${dih.delta.id}'" deltaQuery="SELECT id,first_name,last_name, job, country FROM user  WHERE last_modified > '${dih.last_index_time}'" query="select id,first_name,last_name, job, country from user">
       <field column="id" name="id" />
@@ -43,8 +42,7 @@ Create a new core *user* - `./bin/solr create -c user`
       <field column="country" name="country"/>
     </entity>
   </document>
-</dataConfig>
-`
+</dataConfig>`
 
 4. You also need to edit `server/solr/user/conf/solrconfig.xml` and add following line blocks:
     ___
