@@ -1,0 +1,12 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/solr_test" user="root" password="root" />
+  <document>
+    <entity name="user" pk="id" deltaImportQuery="SELECT id,first_name,last_name, job, country from user WHERE id='${dih.delta.id}'" deltaQuery="SELECT id,first_name,last_name, job, country FROM user  WHERE last_modified > '${dih.last_index_time}'" query="select id,first_name,last_name, job, country from user">
+      <field column="id" name="id" />
+      <field column="first_name" name="first_name"/>
+      <field column="last_name" name="last_name"/>
+      <field column="job" name="job"/>
+      <field column="country" name="country"/>
+    </entity>
+  </document>
+</dataConfig>
