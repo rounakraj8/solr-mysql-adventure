@@ -31,13 +31,10 @@ Python script to generate sample data using Faker, sqlalchemy & pandas.
 
 ### Solr Commands
 
-Start Solr  - `./bin/solr start`
-
-Stop Solr  - `./bin/solr stop`
-
-Restart Solr -    `./bin/solr restart`
-
-Create a new core *user* - `./bin/solr create -c user`
+1. Start Solr  - `./bin/solr start`
+2. Stop Solr  - `./bin/solr stop`
+3. Restart Solr -    `./bin/solr restart`
+4. Create a new core *user* - `./bin/solr create -c user`
 
 ### Steps
 
