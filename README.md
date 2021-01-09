@@ -91,7 +91,9 @@ Python script to generate sample data using Faker, sqlalchemy & pandas.
         --data-raw 'command=delta-import&verbose=false&clean=false&commit=true&core=user&name=dataimport' \
         --compressed
 
-8. Now query to find all Neurosurgeons living in India `http://localhost:8983/solr/user/select?q=country%3AIndia%20AND%20job%3ANeurosurgeon`
+8. Now query to find all Neurosurgeons living in India 
+
+    GET - `http://localhost:8983/solr/user/select?q=country%3AIndia%20AND%20job%3ANeurosurgeon`
 
         {
             "responseHeader":{
