@@ -6,9 +6,11 @@
 
 ![SampleTableSchema ](./images/user_schema.png)
 
+If we have to support delta-import then a column(like last_modified) with timestamp is required, so that Solr can find out the deltas.
+
 ### Creating Sample Data
 
-I am using Python script with to generate sample data using Faker, sqlalchemy & pandas.
+Python script to generate sample data using Faker, sqlalchemy & pandas.
 
   Steps:
 
