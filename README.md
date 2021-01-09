@@ -36,7 +36,7 @@ Python script to generate sample data using Faker, sqlalchemy & pandas.
 3. Restart Solr -    `./bin/solr restart`
 4. Create a new core *user* - `./bin/solr create -c user`
 
-### Steps
+### Steps to index `users` data from MySql into Solr
 
 1. Start Solr
 2. Create a new core `user`, this will create a directory `user`(server/solr/user) 
