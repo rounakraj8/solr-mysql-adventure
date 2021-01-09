@@ -9,7 +9,7 @@ users_to_insert=100000
 fake = Faker()
 engine = create_engine('mysql://root:root@localhost/solr_test', echo=False)
 
-def write():
+def inser_users():
 
     fake_data = defaultdict(list)
 
@@ -26,7 +26,7 @@ def write():
 
 def batch():
     for x in range(0, users_to_insert, batch_size):
-        write();
+        inser_users();
 
 batch()        
 
