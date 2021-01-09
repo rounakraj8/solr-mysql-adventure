@@ -21,6 +21,8 @@ Python script to generate sample data using Faker, sqlalchemy & pandas.
 
 ### Setup Solr
 
+##### Single Server Configuration
+
 <ol>
 <li><a href="https://lucene.apache.org/solr/downloads.html"> Download desired version of Solr</a></li>
 
